@@ -17,5 +17,5 @@ app.post('/api/items', handleBodyParsing, (req, res) => {
 app.put('/api/items/:id', handleBodyParsing, (req, res) => {
   const itemId = req.params.id;
   const updatedItem = req.body; 
-  res.status(201).json({ message:  `PUT request - Updating item ${itemId}, data: ${updatedItem}`});
+  res.status(200).json({ message:  `PUT request - Updating item ${itemId}, data: ${updatedItem}`});
 });
