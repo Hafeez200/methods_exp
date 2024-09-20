@@ -13,3 +13,9 @@ app.post('/api/items', handleBodyParsing, (req, res) => {
   const newItem = req.body;
   res.status(201).json({ message: `POST request - Adding new item, data: ${newItem}` });
 });
+
+app.put('/api/items/:id', handleBodyParsing, (req, res) => {
+  const itemId = req.params.id;
+  const updatedItem = req.body; 
+  res.status(201).json({ message:  `PUT request - Updating item ${itemId}, data: ${updatedItem}`});
+});
