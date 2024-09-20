@@ -11,3 +11,5 @@ app.get('/api/items', (req, res) => {
 
 app.post('/api/items', handleBodyParsing, (req, res) => {
   const newItem = req.body;
+  res.status(201).json({ message: `POST request - Adding new item, data: ${newItem}` });
+});
