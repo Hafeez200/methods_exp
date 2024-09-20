@@ -8,3 +8,6 @@ const handleBodyParsing = bodyParser.json();
 app.get('/api/items', (req, res) => {
   res.status(200).json({ message: 'GET request - Fetching all items' });
 });
+
+app.post('/api/items', handleBodyParsing, (req, res) => {
+  const newItem = req.body;
